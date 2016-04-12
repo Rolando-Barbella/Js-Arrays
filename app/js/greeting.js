@@ -2,7 +2,7 @@ module.exports = function (name) {
     console.log('Hello ' + name);
 };
 
-///Concat Exemples
+///Concat examples
 //1
 var items = [1,2];
 
@@ -19,7 +19,15 @@ people
 	.forEach(function(person){
 		console.log(person.name)
 	})
-///Array Join()
-var names = ['Rolando','Lucy']
-console.log(names.join(' '));
+///Array join() examples
+//1
+var names = ['rolando','lucy']
+var printNames = names.join(' ');
+console.log(printNames);
+var name = 'rolando barbella'
+//2
+var upper = name.split(' ')
+	.map(x => x.charAt(0).toUpperCase()+ x.slice(1))
+	.join(' ');
 
+console.log(upper)
