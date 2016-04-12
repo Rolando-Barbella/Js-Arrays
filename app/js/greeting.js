@@ -31,3 +31,47 @@ var upper = name.split(' ')
 	.join(' ');
 
 console.log(upper)
+//IndexOf
+//1
+var brothers = ['rolando','eduardo','alejandro'];
+var eduardoExists = brothers.indexOf('eduardo')>-1;
+
+console.log(eduardoExists);
+console.log(brothers.indexOf('eduardo'));
+console.log(brothers.indexOf('eduardo',1));
+
+if(!eduardoExists){
+	brothers.push('eduardo');
+}
+//2
+var rolando = {name:'Rolando'};
+var shane = {name:'Shane'};
+var jhon = {name:'Jhon'};
+
+var coders = [rolando,shane,jhon]
+
+console.log(coders.indexOf(jhon));
+//3
+var brothers = [{name:'Rolando'},{name:'Eduardo'},{name:'Alejandro'}];
+var age = ['28','40'];
+//4
+var whitelist = ['.css', '.js'];
+
+var events = [
+  {
+    file: 'css/core.css'
+  },
+  {
+    file: 'js/app.js'
+  },
+  {
+    file: 'index.html'
+  }
+];
+
+var filtered = events.filter(event =>{
+	var ext = require('path').extname(event.file);
+	return whitelist.indexOf(ext) >-1;
+});
+
+console.log(filtered);
