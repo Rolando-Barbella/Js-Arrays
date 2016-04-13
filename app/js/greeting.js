@@ -75,3 +75,33 @@ var filtered = events.filter(event =>{
 });
 
 console.log(filtered);
+
+//Array slice()
+var person = {name:'rolando-barbella'};
+var items = [1,2,3,4,5,person];
+var filters = {
+	'deslugfy':x=>x.replace('-',''),
+	'uppercase':x=>x.toUpperCase()
+}
+var input = 'name | deslugfy | uppercase';//ROLANDO BARBELLA
+var sections = input.split('|').map(x=>x.trim());//[name,deslugify,uppercase]
+var ref = person[sections[0]];//rolando-barbella
+var output   = sections
+    .slice(1)
+    .reduce((prev, next) => {
+        if (filters[next]) {
+            return filters[next].call(null, prev);
+        }
+        return prev;
+    }, ref);
+
+
+console.log(output);
+
+var copy = items.slice();
+copy[5].name = 'George'
+
+console.log(copy);
+console.log(copy.slice(0,1));
+console.log(copy.slice(1,-1));
+
