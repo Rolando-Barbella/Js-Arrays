@@ -6,7 +6,7 @@
   "scripts": {
     "js": "gulp js"
   },
-  "author": "Shane Osbourne",
+  "author": "Rolando Barbella",
   "license": "ISC",
   "devDependencies": {
     "babelify": "^6.3.0",
