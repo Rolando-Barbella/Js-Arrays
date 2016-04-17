@@ -43,4 +43,4 @@ var filter = lessons
 		.join('\n');
 
 		//<ul><Li>Javascript Arrays in Depth - slice</li>
-        //<Li>Javascript Arrays in Depth - concat</li></ul>
+    //<Li>Javascript Arrays in Depth - concat</li></ul>
