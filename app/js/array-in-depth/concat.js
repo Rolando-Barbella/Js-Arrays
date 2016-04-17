@@ -1,66 +1,22 @@
 module.exports = function (name) {
     console.log('Hello ' + name);
 };
+//Concat examples//
 
-//Concat examples
-//Example 1 - Simple
+//Example 1 - basic
 var items = [1,2];
 var newItems = items.concat(1,2,3,'concat',[4,5],[6,7]); // [1,2,3,'concat',4,5,6,7]
 
-//Example 2 - More advance
+//Example 2 - more advance
 var people = [{name:'Mike'},{name:'Billy'}];
 var people2 = [{name:'Rolando'},{name:'Pedro'}];
 people
 	.concat(people2)
 	.forEach(function(person){
 		return person.name; //Mike Billy Rolando Pedro
-	})
-/*//IndexOf
-//1
-var brothers = ['rolando','eduardo','alejandro'];
-var eduardoExists = brothers.indexOf('eduardo')>-1;
+	});
 
-console.log(eduardoExists);
-console.log(brothers.indexOf('eduardo'));
-console.log(brothers.indexOf('eduardo',1));
-
-if(!eduardoExists){
-	brothers.push('eduardo');
-}
-//2
-var rolando = {name:'Rolando'};
-var shane = {name:'Shane'};
-var jhon = {name:'Jhon'};
-
-var coders = [rolando,shane,jhon]
-
-console.log(coders.indexOf(jhon));
-//3
-var brothers = [{name:'Rolando'},{name:'Eduardo'},{name:'Alejandro'}];
-var age = ['28','40'];
-//4
-var whitelist = ['.css', '.js'];
-
-var events = [
-  {
-    file: 'css/core.css'
-  },
-  {
-    file: 'js/app.js'
-  },
-  {
-    file: 'index.html'
-  }
-];
-
-var filtered = events.filter(event =>{
-	var ext = require('path').extname(event.file);
-	return whitelist.indexOf(ext) >-1;
-});
-
-console.log(filtered);
-
-//Array slice()
+/*//Array slice()
 //The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
 //1
 var person = {name:'rolando-barbella'};
