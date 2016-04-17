@@ -16,39 +16,11 @@ people
 		return person.name; //Mike Billy Rolando Pedro
 	});
 
-/*//Array slice()
-//The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
-//1
-var person = {name:'rolando-barbella'};
-var items = [1,2,3,4,5,person];
-var copy = items.slice();
-copy[5].name = 'George'
 
-console.log(copy);
-console.log(copy.slice(0,1));
-console.log(copy.slice(1,-1));
-//2
-var filters = {
-	'deslugfy':x=>x.replace('-',''),
-	'uppercase':x=>x.toUpperCase()
-}
-var input = 'name | deslugfy | uppercase';//ROLANDO BARBELLA
-var sections = input.split('|').map(x=>x.trim());//[name,deslugify,uppercase]
-var ref = person[sections[0]];//rolando-barbella
-var output   = sections
-    .slice(1)
-    .reduce((prev, next) => {
-        if (filters[next]) {
-            return filters[next].call(null, prev);
-        }
-        return prev;
-    }, ref);
-
-console.log(output);
 
 //Array sort()
 //1
-var brothers2 = ['Rolando','Eduardo','Ale']
+/*var brothers2 = ['Rolando','Eduardo','Ale']
 brothers2.sort();
 console.log(brothers2);
 
