@@ -17,34 +17,7 @@ people
 	});
 
 
-
-//Array sort()
-//1
-/*var brothers2 = ['Rolando','Eduardo','Ale']
-brothers2.sort();
-console.log(brothers2);
-
-var items = [10,30,3,20];
-var wrongResult = items.sort();
-
-var rightWay = items.sort((a,b)=>a-b);
-console.log(rightWay);
-console.log(brothers2.sort((a,b)=>b.length - a.length));
-//2
-var content = [{name:'Rolando',views:1000},{name:'Eduardo',views:2000},{name:'Alejandro',views:4000}];
-
-var list = content
-	.sort((a,b)=>b.views - a.views)
-	.map(x=>`<li>${x.name}(${x.views})</li>`)
-	.join(`\n`);
-
-	var output = `<ul>\n${list}\n</ul>`;
-
-	var container = document.querySelector('#output');
-	container.innerHTML = output;
-
-	console.log(list)
-
+/*
 	//Array filter()
 	//1
 var task = [1,2,3,4,5,6];
@@ -125,8 +98,8 @@ list.classList.add(
 list.innerHTML = tasks
    .map(x => x.completed ? `<s>${x.title}</s>` : x.title)
    .map(x => `<li>${x}</li>`)
-   .join('');*/
-//3
+   .join('');
+*///3
 /*function addTask(title){
 	if(tasks.some(task=>task.title === title){
 		return;
