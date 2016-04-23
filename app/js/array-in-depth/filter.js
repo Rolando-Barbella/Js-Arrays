@@ -42,5 +42,5 @@ var filter = lessons
 		.map(x =>`<Li>${x.title}</li>`)
 		.join('\n');
 
-		//<ul><Li>Javascript Arrays in Depth - slice</li>
+    //<ul><Li>Javascript Arrays in Depth - slice</li>
     //<Li>Javascript Arrays in Depth - concat</li></ul>
