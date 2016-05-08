@@ -12,7 +12,7 @@ var tasks = [
     },
     {
         title: 'Feed the cat',
-        completed: true
+        completed: false
     },
     {
         title: 'Watch the array lessons on egghead.io',
@@ -28,16 +28,18 @@ list.classList.add(
 );
 
 list.innerHTML = tasks
-   .map(x => x.completed ? `<s>${x.title}</s>` : x.title)
-   .map(x => `<li>${x}</li>`)
-   .join('');
+ .map(x => x.completed ? `<s>${x.title}</s>` : x.title)
+ .map(x => `<li>${x}</li>`)
+ .join('');
 
 //Example 3 - more advance
-/*function addTask(title){
-	if(tasks.some(task=>task.title === title){
-		return;
-	})
-	tasks.push({title:title,completed:false});
-} 
-addTask('Feed the cata');
-console.log(tasks);*/ 
+function addTask(title){
+  if(tasks.some(task => task.title === title)){
+    return;
+  }
+  tasks.push({title:title,completed:false});
+}
+
+addTask('Feed the cat');
+
+console.log(tasks)

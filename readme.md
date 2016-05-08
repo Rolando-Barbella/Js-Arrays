@@ -62,10 +62,10 @@ var filter = lessons
 
 ```javascript
 var rolando = {name:'Rolando'};
-var shane = {name:'Shane'};
+var bobby = {name:'Bobby'};
 var jhon = {name:'Jhon'};
 
-var coders = [rolando,shane,jhon]
+var coders = [rolando,bobby,jhon]
 coders.indexOf(jhon);//2
 
 ```
