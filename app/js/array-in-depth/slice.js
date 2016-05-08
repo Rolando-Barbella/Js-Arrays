@@ -1,4 +1,5 @@
-//Array slice() - The slice method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument
+//Array slice() 
+// The slice method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument
 
 //Example 1 - basic
 var myName = {name:'rolando-barbella',name:'rolando-barbella'};
