@@ -18,4 +18,8 @@ var reducer = function(tally,vote){
 	}else{
 		tally[vote] = tally[vote] +1;
 	}
-};
+	return tally;
+}
+
+var result = votes.reduce(reducer,initialValue);
+console.log(result);
