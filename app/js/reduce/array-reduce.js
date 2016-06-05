@@ -21,5 +21,4 @@ var reducer = function(tally,vote){
 	return tally;
 }
 
-var result = votes.reduce(reducer,initialValue);
-console.log(result);
+var result = votes.reduce(reducer,initialValue); //{ angular: 3, react: 4, ember: 1, vanilla: 1 }
