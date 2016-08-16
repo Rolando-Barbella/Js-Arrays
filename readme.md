@@ -1,8 +1,10 @@
 #Javascript Arrays
 
-A series of small arrays examples done with vanilla Javascript, it is always good to study the basic including some new features that ES6 offers now.
+Functional programming with Javascript could be quite useful when we are working with arrays, bellow some examples of some build methods that we can take advantage of.
 
 ##Concat
+
+The concat() method is used to join two or more arrays.This method does not change the existing arrays, but returns a new array, containing the values of the joined arrays.
 
 ```javascript
 var newItems = items.concat(1,2,3,'concat',[4,5],[6,7]); // [1,2,3,'concat',4,5,6,7]
@@ -19,6 +21,13 @@ people
 ```
 
 ##Filter
+
+The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+
+Note: filter() does not execute the function for array elements without values.
+
+Note: filter() does not change the original array.
+
 
 ``` javascript
 const lessons = [
@@ -60,6 +69,9 @@ var filter = lessons
 ````
 ##Index off
 
+The indexOf() method returns the position of the first occurrence of a specified value in a string.This method returns -1 if the value to search for never occurs.
+Note: The indexOf() method is case sensitive.
+
 ```javascript
 var rolando = {name:'Rolando'};
 var bobby = {name:'Bobby'};
@@ -72,6 +84,9 @@ coders.indexOf(jhon);//2
 ## Join 
 
 ```javascript
+
+The join() method joins the elements of an array into a string, and returns the string.The elements will be separated by a specified separator. The default separator is comma (,).
+
 //Example 1 - basic
 var names = ['Rolando','Lucy']
 var printNames = names.join(' ');//Rolando Lucy
@@ -79,11 +94,16 @@ var printNames = names.join(' ');//Rolando Lucy
 //Example 2 - more advance
 var name = 'rolando barbella'
 var upper = name.split(' ')//["rolando", "barbella"]
-	.map(x => x.charAt(0).toUpperCase()+ x.slice(1))//["Rolando", "Barbella"]
+	.map(x => x.charAt(0).toUpperCase() + x.slice(1))//["Rolando", "Barbella"]
 	.join(' ');//Rolando Barbella
 
 ```
-##Slice 
+##Sort 
+
+The sort() method sorts the items of an array.The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+
+By default, the sort() method sorts the values as strings in alphabetical and ascending order.
+
 
 ```javascript
 var skills = ['Javascript','HTML','Css']

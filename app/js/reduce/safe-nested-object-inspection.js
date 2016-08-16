@@ -48,3 +48,4 @@ function fatherWasJedi(character){
 characters.forEach(function (character) {
   console.log(character.name + "'s father was a jedi:", fatherWasJedi(character));
 })
+
