@@ -7,6 +7,8 @@ Functional programming with Javascript could be quite useful when we are working
 The concat() method is used to join two or more arrays.This method does not change the existing arrays, but returns a new array, containing the values of the joined arrays.
 
 ```javascript
+//Example 1 - basic
+var items = [1,2];
 var newItems = items.concat(1,2,3,'concat',[4,5],[6,7]); // [1,2,3,'concat',4,5,6,7]
 
 //Example 2 - more advance
