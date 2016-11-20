@@ -113,4 +113,40 @@ skills.sort();//["Css", "HTML", "Javascript"]
 skills.sort((a,b)=>b.length - a.length);//["Javascript", "HTML", "Css"]
 
 ```
+##Some
 
+some() returns a boolean value after passing each item in the source array through the test function that you pass in as the first parameter. It is very handy to use it when you just need a Yes or No answer.
+
+```javascript
+const numbers = [1,2,3,4,5,6];
+const hasThree = numbers.some(x => x===3);
+console.log(hasThree); // true
+```
+
+```javascript
+const tasks = [
+  {
+    title: 'Do laundry',
+    completed: true
+  },
+  {
+    title: 'Feed the cat',
+    completed: false
+  },
+  {
+    title: 'Watch the array lessons on egghead.io',
+    completed: true
+  }
+];
+
+function addTask(title){
+  if(tasks.some(task => task.title === title)){
+    return;
+  }
+  tasks.push({title:title, completed:false});
+}
+
+addTask('Feed the cat');
+
+console.log(tasks) // Same array ( no changes )
+```
