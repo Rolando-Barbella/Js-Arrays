@@ -150,3 +150,34 @@ addTask('Feed the cat');
 
 console.log(tasks) // Same array ( no changes )
 ```
+
+## Every
+
+Array every returns a condition depending on all the elements inside the array
+```javascript
+
+const num = [ 18, 19, 20, ];
+
+const allEighteen = num.every(x => x>= 18)// true
+
+const allThirty = num.every(x => x>= 30)// false
+
+
+```
+
+## Find
+The find() method returns a value of the first element in the array that satisfies the provided testing function. Otherwise false is returned
+
+```javascript
+
+const num = [ 18, 19, 20, ];
+
+const isEighteen = num.find(x => x === 18)// 18
+
+const isTen = num.every(x => x=== 10)// false
+
+
+```
+
+
+
