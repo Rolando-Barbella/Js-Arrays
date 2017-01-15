@@ -26,9 +26,9 @@ people
 
 The filter() method creates an array filled with all array elements that pass a test (provided as a function).
 
-Note: filter() does not execute the function for array elements without values.
+//Note: filter() does not execute the function for array elements without values.
 
-Note: filter() does not change the original array.
+//Note: filter() does not change the original array.
 
 
 ``` javascript
@@ -85,9 +85,10 @@ coders.indexOf(jhon);//2
 ```
 ## Join 
 
+The join() method joins the elements of an array into a string, and returns the string.The elements will be separated by a specified separator. The default separator is comma (,).
+
 ```javascript
 
-The join() method joins the elements of an array into a string, and returns the string.The elements will be separated by a specified separator. The default separator is comma (,).
 
 //Example 1 - basic
 var names = ['Rolando','Lucy']
@@ -148,7 +149,7 @@ function addTask(title){
 
 addTask('Feed the cat');
 
-console.log(tasks) // Same array ( no changes )
+console.table(tasks) // Same array ( no changes )
 ```
 
 ## Every
