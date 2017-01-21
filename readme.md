@@ -4,13 +4,13 @@ Functional programming with Javascript could be quite useful when we are working
 
 - [Concat](#concat)
 - [Filter](#filter)
-- [Index off](#Index-off)
+- [Index off](#index-off)
 - [Join](#join)
 - [Sort](#sort)
 - [Some](#some)
 - [Every](#every)
 - [Find](#find)
-- [FindIndex](#find-index)
+- [FindIndex](#findindex)
 - [Slice](#slice)
 
 ##Concat
