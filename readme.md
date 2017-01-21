@@ -2,6 +2,17 @@
 
 Functional programming with Javascript could be quite useful when we are working with arrays, bellow some examples of some build methods that we can take advantage of.
 
+- [Concat](#concat)
+- [Filter](#filter)
+- [Index off](#Index-off)
+- [Join](#join)
+- [Sort](#sort)
+- [Some](#some)
+- [Every](#every)
+- [Find](#find)
+- [FindIndex](#find-index)
+- [Slice](#slice)
+
 ##Concat
 
 The concat() method is used to join two or more arrays.This method does not change the existing arrays, but returns a new array, containing the values of the joined arrays.
@@ -26,10 +37,7 @@ people
 
 The filter() method creates an array filled with all array elements that pass a test (provided as a function).
 
-//Note: filter() does not execute the function for array elements without values.
-
-//Note: filter() does not change the original array.
-
+> Note: filter() does not execute the function for array elements without values and does not change the original array.
 
 ``` javascript
 const lessons = [
@@ -72,7 +80,7 @@ var filter = lessons
 ##Index off
 
 The indexOf() method returns the position of the first occurrence of a specified value in a string.This method returns -1 if the value to search for never occurs.
-Note: The indexOf() method is case sensitive.
+>Note: The indexOf() method is case sensitive.
 
 ```javascript
 var rolando = {name:'Rolando'};
@@ -179,6 +187,39 @@ const isTen = num.every(x => x=== 10)// false
 
 
 ```
+
+## FindIndex
+
+findIndex() returns an index of the first element in the array that satisfies the provided testing function. Otherwise -1 is returned.
+
+```javascript
+
+[12, 5, 8, 130, 44].findIndex( x => x>= 12); // 0
+
+[12, 5, 8, 130, 44].findIndex( x => x>= 44); // 3
+
+[12, 5, 8, 130, 44].findIndex( x => x>= 130); // 3
+
+[12, 5, 8, 130, 44].findIndex( x => x === 5); // 1
+
+```
+
+## Slice
+
+The slice() method creates a new array where you can use two possible parameters: start and finish, one catch you need to consider is that if you want to select multiple elements, the second parameter has to be + 1 from the range of arguments you would like to select.
+
+
+```javascript
+
+const letters = [ 'a', 'b', 'c']
+
+letters.slice(0,1) // [ "a" ]
+
+letters.slice(0,2) // [ "a", "b" ]
+
+
+```
+
 
 
 
