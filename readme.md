@@ -220,6 +220,33 @@ letters.slice(0,2) // [ "a", "b" ]
 
 ```
 
+## Reduce
+
+In order to use reduce, you need at least two things: the initial value and the accumulator, the inital value, is the firts one who gets reads as soon as the function fires, the accumulator is the one that gets evaluetas at the end.
+
+There is two extra parameters that you can use with reduce: index and array, 
+1 - The index is the one between the parent array.
+2 - Array is the arry itself. 
+
+Some examples:
+
+```javascript
+
+ unction reducer(accumulator,value,index,array){
+  var intermediaryValue = accumulator + value;
+  if(index === array.length -1){
+    return intermediaryValue / array.length;
+  }
+  return accumulator + value;
+}
+
+var data = [1,2,3,3,4,5,3];
+var mean = data.reduce(reducer,0);//3
+
+```
+
+
+
 
 
 
