@@ -222,11 +222,11 @@ letters.slice(0,2) // [ "a", "b" ]
 
 ## Reduce
 
-In order to use reduce, you need at least two things: the initial value and the accumulator, the inital value, is the firts one who gets reads as soon as the function fires, the accumulator is the one that gets evaluetas at the end.
+In order to use reduce, you need at least two things: the initial value and the accumulator, the initial value, is the first one who gets reads as soon as the function fires, the accumulator is the one that gets evaluated at the end.
 
 There is two extra parameters that you can use with reduce: index and array, 
 1 - The index is the one between the parent array.
-2 - Array is the arry itself. 
+2 - Array is the array itself. 
 
 Some examples:
 
