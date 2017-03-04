@@ -12,6 +12,8 @@ Functional programming with Javascript could be quite useful when we are working
 - [Find](#find)
 - [FindIndex](#findindex)
 - [Slice](#slice)
+- [Reduce](#reduce)
+
 
 ##Concat
 
@@ -232,7 +234,7 @@ Some examples:
 
 ```javascript
 
- unction reducer(accumulator,value,index,array){
+ function reducer(accumulator,value,index,array){
   var intermediaryValue = accumulator + value;
   if(index === array.length -1){
     return intermediaryValue / array.length;
