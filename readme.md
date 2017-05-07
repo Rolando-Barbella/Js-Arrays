@@ -1,4 +1,4 @@
-#Javascript Arrays
+# Javascript Arrays
 
 Functional programming with Javascript could be quite useful when we are working with arrays, bellow some examples of some build methods that we can take advantage of.
 
@@ -15,7 +15,7 @@ Functional programming with Javascript could be quite useful when we are working
 - [Reduce](#reduce)
 
 
-##Concat
+## Concat
 
 The concat() method is used to join two or more arrays.This method does not change the existing arrays, but returns a new array, containing the values of the joined arrays.
 
@@ -35,7 +35,7 @@ people
 
 ```
 
-##Filter
+## Filter
 
 The filter() method creates an array filled with all array elements that pass a test (provided as a function).
 
@@ -79,7 +79,7 @@ var filter = lessons
     //<Li>Javascript Arrays in Depth - concat</li></ul>
 
 ````
-##Index off
+## Index off
 
 The indexOf() method returns the position of the first occurrence of a specified value in a string.This method returns -1 if the value to search for never occurs.
 >Note: The indexOf() method is case sensitive.
@@ -111,7 +111,7 @@ var upper = name.split(' ')//["rolando", "barbella"]
 	.join(' ');//Rolando Barbella
 
 ```
-##Sort 
+## Sort 
 
 The sort() method sorts the items of an array.The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
 
@@ -124,7 +124,7 @@ skills.sort();//["Css", "HTML", "Javascript"]
 skills.sort((a,b)=>b.length - a.length);//["Javascript", "HTML", "Css"]
 
 ```
-##Some
+## Some
 
 some() returns a boolean value after passing each item in the source array through the test function that you pass in as the first parameter. It is very handy to use it when you just need a Yes or No answer.
 
@@ -227,7 +227,9 @@ letters.slice(0,2) // [ "a", "b" ]
 In order to use reduce, you need at least two things: the initial value and the accumulator, the initial value, is the first one who gets reads as soon as the function fires, the accumulator is the one that gets evaluated at the end.
 
 There is two extra parameters that you can use with reduce: index and array, 
+
 1 - The index is the one between the parent array.
+
 2 - Array is the array itself. 
 
 Some examples:
