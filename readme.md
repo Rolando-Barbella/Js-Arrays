@@ -11,6 +11,7 @@ Functional programming with Javascript could be quite useful when we are working
 - [Every](#every)
 - [Find](#find)
 - [FindIndex](#findindex)
+- [Fill](#fill)
 - [Slice](#slice)
 - [Reduce](#reduce)
 
@@ -98,8 +99,6 @@ coders.indexOf(jhon);//2
 The join() method joins the elements of an array into a string, and returns the string.The elements will be separated by a specified separator. The default separator is comma (,).
 
 ```javascript
-
-
 //Example 1 - basic
 var names = ['Rolando','Lucy']
 var printNames = names.join(' ');//Rolando Lucy
@@ -108,7 +107,8 @@ var printNames = names.join(' ');//Rolando Lucy
 var name = 'rolando barbella'
 var upper = name.split(' ')//["rolando", "barbella"]
 	.map(x => x.charAt(0).toUpperCase() + x.slice(1))//["Rolando", "Barbella"]
-	.join(' ');//Rolando Barbella
+	.join(' ');
+  //Rolando Barbella
 
 ```
 ## Sort 
@@ -177,6 +177,7 @@ const allThirty = num.every(x => x>= 30)// false
 ```
 
 ## Find
+
 The find() method returns a value of the first element in the array that satisfies the provided testing function. Otherwise false is returned
 
 ```javascript
@@ -203,6 +204,24 @@ findIndex() returns an index of the first element in the array that satisfies th
 [12, 5, 8, 130, 44].findIndex( x => x>= 130); // 3
 
 [12, 5, 8, 130, 44].findIndex( x => x === 5); // 1
+
+```
+## Fill
+
+Filling an existing array entirely or partially, it takes three possible arguments, the replacement value, start and end index ( last two optionals ).
+
+*Note: It mutates the original array
+
+```javascript
+const names = [ 'Rolando', 'Ana', 'Jhon', 'Marta' ];
+
+names.fill('Luigi'); // ['Luigi','Luigi','Luigi','Luigi']
+
+const numbers = [1,3,3,4,5]; 
+
+numbers.fill(2, 1, 2) // [1, 2, 3, 4, 5]
+
+numbers.fill(2, 1, 3) // [1, 2, 2, 4, 5]
 
 ```
 
