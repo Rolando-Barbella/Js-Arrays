@@ -14,6 +14,7 @@ Functional programming with Javascript could be quite useful when we are working
 - [Fill](#fill)
 - [Slice](#slice)
 - [Reduce](#reduce)
+- [Arrayfrom](#arrayfrom)
 
 
 ## Concat
@@ -213,6 +214,7 @@ Filling an existing array entirely or partially, it takes three possible argumen
 *Note: It mutates the original array
 
 ```javascript
+
 const names = [ 'Rolando', 'Ana', 'Jhon', 'Marta' ];
 
 names.fill('Luigi'); // ['Luigi','Luigi','Luigi','Luigi']
@@ -238,7 +240,6 @@ letters.slice(0,1) // [ "a" ]
 
 letters.slice(0,2) // [ "a", "b" ]
 
-
 ```
 
 ## Reduce
@@ -255,7 +256,7 @@ Some examples:
 
 ```javascript
 
- function reducer(accumulator,value,index,array){
+function reducer(accumulator,value,index,array){
   var intermediaryValue = accumulator + value;
   if(index === array.length -1){
     return intermediaryValue / array.length;
@@ -264,12 +265,49 @@ Some examples:
 }
 
 var data = [1,2,3,3,4,5,3];
-var mean = data.reduce(reducer,0);//3
+var mean = data.reduce(reducer,0); //3
 
 ```
+## Arrayfrom
+The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
 
+### Paramaters
 
+#### Array like
+An array or objet.
 
+#### mapFn
+Map function iterates and creates a new array.
 
+#### this value
+Value to use as this when executing mapFn.
 
+### With strings example
+See difference between split()
 
+```js
+Array.from("How are you doing today?");
+// ["H", "o", "w", " ", "a", "r", "e", " ", "y", "o", "u", "?]
+// length of 24
+
+"How are you doing today?".split(" ");
+// ["How", "are", "you?"]
+// length of 3
+```
+
+### Creating a new array of objects
+```js
+const numbers= Array.from([1,2,3], (number,id) => (
+	  { id, number } 
+  );
+);
+// [{id: 0, number: 1}, {id: 1, number: 2}, {id: 2, number: 3}]
+```
+### Using the lenght key
+```js
+const arr = Array.from({ length: 3 }, (e,i) => (
+	{ id: `itam-${i+1}`} 
+  )
+ );
+ // [ {id: "itam-1"}, {id: "itam-2"}, {id: "itam-3"}]
+```
